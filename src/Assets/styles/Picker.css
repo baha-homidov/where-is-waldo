@@ -1,0 +1,14 @@
+.picker-container {
+  position: absolute;
+  background-color: yellow;
+}
+
+.picker-container > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.picker-container li {
+  
+}

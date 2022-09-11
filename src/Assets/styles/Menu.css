@@ -1,0 +1,28 @@
+li {
+ list-style: none;
+}
+.hide {
+  display: none !important;
+  background-color: red;
+}
+
+.menu-container {
+  margin-left: auto;
+}
+
+.menu-list {
+  z-index: 1;
+  background-color: pink;
+  position: absolute;
+  top: 72px;
+  border: 1px solid blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100vw; /* Need a specific value to work */
+  max-width: 100vw;
+}
