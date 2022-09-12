@@ -1,4 +1,47 @@
 .canvas-container {
   border: 1px solid green;
-  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.play-area {
+  position: relative;
+  max-width: 1300px;
+  height: auto;
+}
+
+.freeman {
+  position: absolute;
+  left: 84%;
+  top: 9.1%;
+  width: 3%;
+  height: 7%;
+  border: 2px solid rgb(13, 0, 255);
+}
+
+
+.pikachu {
+  position: absolute;
+  left: 60%;
+  top: 1.5%;
+  width: 4.2%;
+  height: 7%;
+  border: 2px solid rgb(0, 255, 72);
+}
+
+
+.little-big {
+  position: absolute;
+  left: 30.4%;
+  top: 79.7%;
+  width: 3.3%;
+  height: 8.4%;
+  border: 2px solid rgb(0, 247, 255);
+}
+
+.play-area > img {
+  max-width: 1300px;
+  width: 100%;
+  height: auto;
 }
