@@ -39,9 +39,13 @@
   height: 8.4%;
   border: 2px solid rgb(0, 247, 255);
 }
+.freeman, .pikachu, .little-big {
+  pointer-events: none;
+}
 
 .play-area > img {
   max-width: 1300px;
   width: 100%;
   height: auto;
 }
+

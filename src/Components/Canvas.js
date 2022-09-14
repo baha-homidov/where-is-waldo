@@ -1,24 +1,30 @@
 import "../Assets/styles/Canvas.css";
 import Picker from "./Picker";
+import Success from "./Success";
+import Fail from "./Fail";
 import React, { useState } from "react";
 import artImage from "../Assets/img/art.jpeg";
 function Canvas() {
   const [coordinates, setCoordinates] = useState({ x: 0, y: 0 });
-  const [visibility, setVisibilty] = useState("");
-  // function switchPicker() {
-  //   console.log("click");
-  //   if (picker) {
-  //     setPicker(null);
-  //   } else {
-  //     setPicker(<Picker coordinates = {coordinates}/>);
-  //   }
-  // }
+  const [pickerVisibility, setPickerVisibility] = useState("hide");
+  const [successVisility, setSuccessVisibility] = useState("hide");
+  const [failVisibilty, setFailVisibility] = useState("hide");
+
+  
+
+  function success() {
+    console.log("success");
+  }
+
+  function fail() {
+    console.log("fail");
+  }
 
   function onClickOnImage(event) {
-    if (visibility === "") {
-      setVisibilty("hide");
+    if (pickerVisibility === "") {
+      setPickerVisibility("hide");
     } else {
-      setVisibilty("");
+      setPickerVisibility("");
       // event.nativeEvent.offsetX/offsetY offset relative to clien's image size
       const playArea = document.querySelector(".play-area");
 
@@ -34,13 +40,11 @@ function Canvas() {
       const xPercent = X / (clientWidth / 100);
       const yPercent = Y / (clientHeight / 100);
 
-      console.log(`Coordinates: X= ${xPercent}%, Y = ${yPercent}%`);
-
       const newCoordinates = {
         x: xPercent,
         y: yPercent,
       };
-
+      console.log(newCoordinates);
       setCoordinates(newCoordinates);
     }
   }
@@ -48,7 +52,14 @@ function Canvas() {
   return (
     <div className="canvas-container">
       <div className="play-area" onClick={onClickOnImage}>
-        <Picker className={visibility} coordinates={coordinates} />
+        <Picker
+          className={pickerVisibility}
+          coordinates={coordinates}
+          responseFunctions = {{
+            success,
+            fail,
+          }}
+        />
         <img src={artImage} alt="" />
         <div className="freeman"></div>
         <div className="pikachu"></div>
