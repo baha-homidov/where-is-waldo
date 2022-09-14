@@ -6,8 +6,8 @@ function Picker(props) {
   const [pikachu, setPickachu] = useState({});
   const [freeman, setFreeman] = useState({});
   const [sackboy, setSackboy] = useState({});
-  const [successCount, setSuccessCount] = useState(0);
-  console.log(successCount);
+  const [successCount, setSuccessCount] = useState(0); // max success count is 3
+
   useEffect(() => {
     async function initData() {
       const freeman = await getHero("freeman");
@@ -18,10 +18,18 @@ function Picker(props) {
 
       const sackboy = await getHero("sackboy");
       setSackboy(sackboy);
-      console.log("finish");
     }
     initData();
   }, []);
+
+  useEffect(() => {
+    if (successCount === 3) {
+      // listen to the successCount and show the you win screen when all the 3 heros are found
+      console.log("YOU WON BEBE!");
+    } else {
+      console.log("not yet bebe");
+    }
+  }, [successCount]);
 
   const PickerStyle = {
     position: "absolute",
@@ -87,27 +95,38 @@ function Picker(props) {
     }
   }
 
-  return (
-    <div style={PickerStyle} className={`${props.className} picker-container`}>
-      <ul>
-        <li className="freeman">
-          <button className="choice" onClick={checkFreeman}>
-            Gordon Freeman
-          </button>
-        </li>
-        <li className="pikachu">
-          <button className="choice" onClick={checkPikachu}>
-            Pickachu
-          </button>
-        </li>
-        <li className="sackboy">
-          <button className="choice" onClick={checkSackboy}>
-            Sackboy
-          </button>
-        </li>
-      </ul>
-    </div>
-  );
+  if (successCount === 3) {
+    return (
+      <div>
+        <h1>You win bebe!</h1>
+      </div>
+    );
+  } else {
+    return (
+      <div
+        style={PickerStyle}
+        className={`${props.className} picker-container`}
+      >
+        <ul>
+          <li className="freeman">
+            <button className="choice" onClick={checkFreeman}>
+              Gordon Freeman
+            </button>
+          </li>
+          <li className="pikachu">
+            <button className="choice" onClick={checkPikachu}>
+              Pickachu
+            </button>
+          </li>
+          <li className="sackboy">
+            <button className="choice" onClick={checkSackboy}>
+              Sackboy
+            </button>
+          </li>
+        </ul>
+      </div>
+    );
+  }
 }
 
 export default Picker;

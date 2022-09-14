@@ -12,6 +12,7 @@ function Canvas() {
 
   function success() {
     setSuccessVisibility("");
+    setFailVisibility("hide");
     setTimeout(function () {
       setSuccessVisibility("hide");
     }, 3000);
@@ -20,10 +21,10 @@ function Canvas() {
 
   function fail() {
     setFailVisibility("");
+    setSuccessVisibility("hide");
     setTimeout(function () {
       setFailVisibility("hide");
     }, 3000);
-    console.log("success");
   }
 
   function onClickOnImage(event) {
