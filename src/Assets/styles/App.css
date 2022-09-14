@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+.hide {
+  visibility: hidden !important;
+}
+
 .App {
   min-height: 875px;
   display: flex;

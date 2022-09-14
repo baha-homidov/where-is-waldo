@@ -10,14 +10,20 @@ function Canvas() {
   const [successVisility, setSuccessVisibility] = useState("hide");
   const [failVisibilty, setFailVisibility] = useState("hide");
 
-  
-
   function success() {
+    setSuccessVisibility("");
+    setTimeout(function () {
+      setSuccessVisibility("hide");
+    }, 3000);
     console.log("success");
   }
 
   function fail() {
-    console.log("fail");
+    setFailVisibility("");
+    setTimeout(function () {
+      setFailVisibility("hide");
+    }, 3000);
+    console.log("success");
   }
 
   function onClickOnImage(event) {
@@ -55,15 +61,17 @@ function Canvas() {
         <Picker
           className={pickerVisibility}
           coordinates={coordinates}
-          responseFunctions = {{
+          responseFunctions={{
             success,
             fail,
           }}
         />
+        <Success className={successVisility} />
+        <Fail className={failVisibilty} />
         <img src={artImage} alt="" />
-        <div className="freeman"></div>
-        <div className="pikachu"></div>
-        <div className="little-big"></div>
+        <div className="freeman-border"></div>
+        <div className="pikachu-border"></div>
+        <div className="little-big-border"></div>
       </div>
     </div>
   );

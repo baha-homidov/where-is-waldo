@@ -1,7 +1,11 @@
 .picker-container {
-  transform:  translate(-50%,-110%);
+  transform: translate(-50%, -110%);
   position: absolute;
   background-color: yellow;
+  visibility: visible;
+
+  opacity: 1;
+  
 }
 
 .picker-container > ul {

@@ -6,7 +6,8 @@ function Picker(props) {
   const [pikachu, setPickachu] = useState({});
   const [freeman, setFreeman] = useState({});
   const [sackboy, setSackboy] = useState({});
-
+  const [successCount, setSuccessCount] = useState(0);
+  console.log(successCount);
   useEffect(() => {
     async function initData() {
       const freeman = await getHero("freeman");
@@ -37,7 +38,11 @@ function Picker(props) {
       y >= freeman.lower_y &&
       y <= freeman.upper_y
     ) {
+      // remove freeman menu option
+      const freemanDiv = document.querySelector("li.freeman");
+      freemanDiv.remove();
       props.responseFunctions.success();
+      setSuccessCount(successCount + 1);
     } else {
       props.responseFunctions.fail();
     }
@@ -53,7 +58,11 @@ function Picker(props) {
       y >= sackboy.lower_y &&
       y <= sackboy.upper_y
     ) {
+      // remove sackboy menu option
+      const sackboyDiv = document.querySelector("li.sackboy");
+      sackboyDiv.remove();
       props.responseFunctions.success();
+      setSuccessCount(successCount + 1);
     } else {
       props.responseFunctions.fail();
     }
@@ -62,30 +71,36 @@ function Picker(props) {
   function checkPikachu() {
     const x = props.coordinates.x;
     const y = props.coordinates.y;
-    if (x >= pikachu.lower_x &&
+    if (
+      x >= pikachu.lower_x &&
       x <= pikachu.upper_x &&
       y >= pikachu.lower_y &&
-      y <= pikachu.upper_y) {
-      props.responseFunctions.success();
+      y <= pikachu.upper_y
+    ) {
+      // remove pikachu menu option
+      const pikachuDiv = document.querySelector("li.pikachu");
+      pikachuDiv.remove();
+      props.responseFunctions.success(); // show "Success popup"
+      setSuccessCount(successCount + 1);
     } else {
       props.responseFunctions.fail();
     }
   }
 
   return (
-    <div style={PickerStyle} className={`picker-container`}>
-      <ul className={props.className}>
-        <li>
+    <div style={PickerStyle} className={`${props.className} picker-container`}>
+      <ul>
+        <li className="freeman">
           <button className="choice" onClick={checkFreeman}>
             Gordon Freeman
           </button>
         </li>
-        <li>
+        <li className="pikachu">
           <button className="choice" onClick={checkPikachu}>
             Pickachu
           </button>
         </li>
-        <li>
+        <li className="sackboy">
           <button className="choice" onClick={checkSackboy}>
             Sackboy
           </button>
