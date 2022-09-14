@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import "../Assets/styles/Picker.css";
+import WinScreen from "./WinScreen";
 import React, { useEffect, useState } from "react";
 import { getHero } from "../firebaseBackend";
 function Picker(props) {
@@ -98,7 +99,7 @@ function Picker(props) {
   if (successCount === 3) {
     return (
       <div>
-        <h1>You win bebe!</h1>
+        <WinScreen />
       </div>
     );
   } else {
