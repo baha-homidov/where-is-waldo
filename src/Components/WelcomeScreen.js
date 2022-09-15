@@ -19,7 +19,7 @@ function WelcomeScreen(props) {
           <div className="charachter-entry">
             <div className="name">Sackboy</div>
           </div>
-          <button className="let-go" onClick={props.hide}>
+          <button className="let-go" onClick={props.startGame}>
             Let's go!
           </button>
         </div>

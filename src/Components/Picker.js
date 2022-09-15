@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import "../Assets/styles/Picker.css";
-import WinScreen from "./WinScreen";
+
 import React, { useEffect, useState } from "react";
 import { getHero } from "../firebaseBackend";
 function Picker(props) {
@@ -21,12 +21,14 @@ function Picker(props) {
       setSackboy(sackboy);
     }
     initData();
+  
   }, []);
 
   useEffect(() => {
     if (successCount === 3) {
       // listen to the successCount and show the you win screen when all the 3 heros are found
       console.log("YOU WON BEBE!");
+      props.endGame();
     } else {
       console.log("not yet bebe");
     }
@@ -97,11 +99,7 @@ function Picker(props) {
   }
 
   if (successCount === 3) {
-    return (
-      <div>
-        <WinScreen />
-      </div>
-    );
+    return <></>;
   } else {
     return (
       <div

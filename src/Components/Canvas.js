@@ -4,7 +4,7 @@ import Success from "./Success";
 import Fail from "./Fail";
 import React, { useState } from "react";
 import artImage from "../Assets/img/art.jpeg";
-function Canvas() {
+function Canvas(props) {
   const [coordinates, setCoordinates] = useState({ x: 0, y: 0 });
   const [pickerVisibility, setPickerVisibility] = useState("hide");
   const [successVisility, setSuccessVisibility] = useState("hide");
@@ -62,6 +62,7 @@ function Canvas() {
         <Picker
           className={pickerVisibility}
           coordinates={coordinates}
+          endGame={props.endGame}
           responseFunctions={{
             success,
             fail,
