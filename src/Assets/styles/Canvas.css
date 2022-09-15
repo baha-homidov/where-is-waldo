@@ -53,13 +53,25 @@
 
 .success-container,
 .fail-container {
-  border: 1px solid red;
-  background-color: pink;
+  color: white;
+  padding: 5px;
+  box-shadow: 3px 3px #ffffff;
   position: fixed;
   top: 35%;
   left: 50%;
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
-  
   visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+
+.fail-container {
+  background-color: #E95664;
+}
+
+.success-container {
+  background-color: rgb(26, 213, 9);
+
 }

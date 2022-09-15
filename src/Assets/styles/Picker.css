@@ -1,15 +1,54 @@
 .picker-container {
-  transform: translate(-50%, -110%);
+  transform: translate(-50%, -115%);
   position: absolute;
-  background-color: yellow;
+  background-color: #4a68b494;
   visibility: visible;
-
   opacity: 1;
-  
+  transition: opacity 0.2s ease;
 }
 
+
 .picker-container > ul {
+  font-size: 1.3em;
+  padding: 5px;
+  padding-left: 0px;
+  padding-right: 0px;
+  list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  align-items: center;
+  gap: 4px;
+}
+
+.choice {
+  padding: 2px;
+  color: white;
+  background-color: #ed8337;
+  margin-bottom: -5px;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  transition: all 0.1s ease-out;
+}
+
+.choice:hover {
+  box-shadow: 1px 1px #ffffff;
+  transform: translate(-3px, -3px);
+}
+
+.choice:active {
+  transform: translate(0px, 0px);
+  box-shadow: 0px 0px #ffffff;
+}
+
+.arrow-down {
+  position: absolute;
+  width: 0; 
+  height: 0; 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #f00;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
 }

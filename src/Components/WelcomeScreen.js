@@ -5,7 +5,7 @@ import freeman from "../Assets/img/freeman.png";
 import pikachu from "../Assets/img/pikachu.png";
 import sackboy from "../Assets/img/sackboy.png";
 function WelcomeScreen(props) {
-  const [visibility, setVisibility] = useState(true);
+  const [visibility, setVisibility] = useState(false);
 
   return (
     <div className="welcome-screen-container">

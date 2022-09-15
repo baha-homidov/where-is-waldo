@@ -8,7 +8,7 @@ import WinScreen from "./WinScreen";
 
 function App() {
   // visibility controllers
-  const [welcomeScreenVisibility, setWelcomeScreenVisibility] = useState(true);
+  const [welcomeScreenVisibility, setWelcomeScreenVisibility] = useState(false);
   const [winScreenVisibility, setWinScreenVisibility] = useState(false);
   // time logic
   const [time, setTime] = useState(0);

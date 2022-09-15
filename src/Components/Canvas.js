@@ -5,8 +5,8 @@ import Fail from "./Fail";
 import React, { useState } from "react";
 import artImage from "../Assets/img/art.jpeg";
 function Canvas(props) {
-  const [coordinates, setCoordinates] = useState({ x: 0, y: 0 });
-  const [pickerVisibility, setPickerVisibility] = useState("hide");
+  const [coordinates, setCoordinates] = useState({ x: 0, y: 0 }); 
+  const [pickerVisibility, setPickerVisibility] = useState("hide"); 
   const [successVisility, setSuccessVisibility] = useState("hide");
   const [failVisibilty, setFailVisibility] = useState("hide");
 

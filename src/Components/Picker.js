@@ -123,6 +123,8 @@ function Picker(props) {
             </button>
           </li>
         </ul>
+        <div className="arrow-down">
+        </div>
       </div>
     );
   }
