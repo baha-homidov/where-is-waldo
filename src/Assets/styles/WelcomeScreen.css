@@ -2,7 +2,6 @@
   min-width: 100vw;
   min-height: 100vh;
   position: fixed;
-
   z-index: 2;
   display: flex;
   flex: column;
@@ -11,10 +10,96 @@
 }
 
 .welcome-screen {
+  position: relative;
   border: 1px solid blue;
-  background-color: white;
-  transform: translateY(-10vh);
+  background-color: #4d70d7;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 10px;
+  width: max(30vw, 350px);
+}
+
+.instructions {
+  font-weight: bold;
+  align-self: flex-start;
+  color: #532311;
+  background-color: white;
+  box-shadow: 3px -3px #ed9654;
+}
+
+.welcome {
+  align-self: flex-start;
+  font-size: 1em;
+  color: white;
+}
+
+.welcome-screen > .title {
+  font-size: 2.7em;
+  color: white;
+  align-self: flex-start;
+}
+
+.heroes-container {
+  margin-top: 10px;
+
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero-entry {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero-entry > .photo {
+  box-shadow: 6px -6px #ed9654;
+  width: 15%;
+  height: auto;
+}
+
+.hero-entry > .name {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: white;
+}
+
+.button-container {
+  display: flex;
+
+  align-self: stretch;
+  margin: -10px;
+  margin-top: 10px;
+}
+
+.button-container > * {
+  font-size: 1.2em;
+  font-weight: bold;
+  flex: 1;
+  border: none;
+  height: 40px;
+  transition: all 0.1s ease-out;
+}
+
+.button-container > .let-go {
+  color: rgb(66, 66, 66);
+  background-color: aquamarine;
+}
+
+.button-container > .leaderboard-button {
+  color: rgb(66, 66, 66);
+  background-color: #e8b288;
+}
+.button-container > *:hover {
+  color: black;
+  transform: translate(-3px, -3px);
+}
+
+.button-container > *:active {
+
+  transform: translate(0px, 0px);
+
 }
