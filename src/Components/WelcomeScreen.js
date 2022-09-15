@@ -5,7 +5,7 @@ import freeman from "../Assets/img/freeman.png";
 import pikachu from "../Assets/img/pikachu.png";
 import sackboy from "../Assets/img/sackboy.png";
 function WelcomeScreen(props) {
-  const [visibility, setVisibility] = useState(false);
+  const [visibility, setVisibility] = useState(true);
 
   return (
     <div className="welcome-screen-container">
@@ -39,7 +39,7 @@ function WelcomeScreen(props) {
           }}>
             Leaderboard
           </button>
-          <button className="let-go" onClick={props.startGame}>
+          <button className="lets-go" onClick={props.startGame}>
             Let's go!
           </button>
         </div>
