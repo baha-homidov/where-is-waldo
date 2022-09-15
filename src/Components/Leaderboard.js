@@ -11,17 +11,22 @@ function Leaderboard(props) {
           <img className="cup" src={cup} alt="" /> LEADERBOARD
         </h1>
         <div className="score-list">
-          {props.leaderboardArray.map((element, index) => (
+          {props.leaderboardArray.map((element, index) => {
+            let name;
+            if (element.name === "") { name = "Anonymous" } else {
+              name = element.name;
+            }
+            return (
             <div className={`entry index-${index+1}`} key={index}>
               <span className="number">{index + 1}</span>
-              <span className="name">{element.name} </span>
+              <span className="name">{name} </span>
               <span className="time">
                 {("0" + Math.floor((element.time / 60000) % 60)).slice(-2)}:
                 {("0" + Math.floor((element.time / 1000) % 60)).slice(-2)}
                 <img src={stopwatch} alt="" />
               </span>
             </div>
-          ))}
+          )})}
         </div>
         <button
           className="close-leaderboard"

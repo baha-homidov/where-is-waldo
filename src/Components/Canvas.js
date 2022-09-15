@@ -71,9 +71,9 @@ function Canvas(props) {
         <Success className={successVisility} />
         <Fail className={failVisibilty} />
         <img src={artImage} alt="" />
-        <div className="freeman-border"></div>
+        {/* <div className="freeman-border"></div>
         <div className="pikachu-border"></div>
-        <div className="little-big-border"></div>
+        <div className="little-big-border"></div> */}
       </div>
     </div>
   );
