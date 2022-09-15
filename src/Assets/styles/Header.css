@@ -1,27 +1,27 @@
 .header-container {
-
-
-  border: 1px solid red;
-  padding: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 .header-container > .title {
+  width: min(1500px, 100vw);
+  margin-top: 10px;
+  margin-bottom: 10px;
   display: flex;
 }
 
 .left {
-  box-shadow: -5px -5px #F0CFB7;
+  box-shadow: -5px -5px #f0cfb7;
   padding: 3px;
   color: white;
-  background-color: #4D70D7;
+  background-color: #4d70d7;
 }
 
 .right {
   margin-left: 3px;
-  color: #7FFFD4;
-align-self: flex-start;
+  background-color: #4d70d7;
+  box-shadow: 2px -2px #f0cfb7;
+  color: #7fffd4;
+  align-self: flex-start;
   font-size: 0.5em;
 }
-
-
-
