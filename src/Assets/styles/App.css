@@ -9,9 +9,10 @@
 }
 
 .App {
+  background-color: #8ba7fd;
   min-height: 875px;
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
+
   min-height: 100vh;
 }

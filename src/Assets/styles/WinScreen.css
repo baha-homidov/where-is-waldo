@@ -1,9 +1,11 @@
 .win-screen-container {
   position: fixed;
+  justify-content: center;
+  align-items: center;
   min-width: 100vw;
   min-height: 100vh;
   background-color: rgba(255, 192, 203, 0.243);
-  z-index: 2;
+  z-index: 3;
 }
 
 
