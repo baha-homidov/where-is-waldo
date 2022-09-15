@@ -9,7 +9,7 @@ function Picker(props) {
   const [sackboy, setSackboy] = useState({});
   const [successCount, setSuccessCount] = useState(0); // max success count is 3
 
-  useEffect(() => {
+  useEffect(() => {  // retrieve data from the firestore backend
     async function initData() {
       const freeman = await getHero("freeman");
       setFreeman(freeman);

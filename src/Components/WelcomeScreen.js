@@ -1,6 +1,8 @@
 import "../Assets/styles/WelcomeScreen.css";
+import Leaderboard from "./Leaderboard";
 
 function WelcomeScreen(props) {
+
   return (
     <div className="welcome-screen-container">
       <div className="welcome-screen">
@@ -19,6 +21,7 @@ function WelcomeScreen(props) {
           <div className="charachter-entry">
             <div className="name">Sackboy</div>
           </div>
+          <Leaderboard leaderboardArray={props.leaderboardArray} />
           <button className="let-go" onClick={props.startGame}>
             Let's go!
           </button>
