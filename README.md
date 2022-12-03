@@ -2,6 +2,10 @@
 
 A puzzle game based on the Where's Waldo
 
+
+![whereswaldo](https://user-images.githubusercontent.com/96972109/205438675-3bc9281c-cf3d-45cb-898c-e26e7cc812af.png)
+
+
 ### Access
 
 - The project is hosted on Github Pages and can be accessed by visiting this link [Where's Waldo (Game Legends Edition)](https://baha-homidov.github.io/where-is-waldo/)
