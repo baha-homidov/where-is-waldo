@@ -27,10 +27,10 @@ function Picker(props) {
   useEffect(() => {
     if (successCount === 3) {
       // listen to the successCount and show the you win screen when all the 3 heros are found
-      console.log("YOU WON BEBE!");
+
       props.endGame();
     } else {
-      console.log("not yet bebe");
+
     }
   }, [successCount]);
 

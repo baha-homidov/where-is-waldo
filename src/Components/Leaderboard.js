@@ -2,7 +2,7 @@ import "../Assets/styles/Leaderboard.css";
 import cup from "../Assets/img/cup.png";
 import stopwatch from "../Assets/img/stopwatch.svg"
 function Leaderboard(props) {
-  console.log(props);
+
   return (
     <div className="leaderboard-container">
       <div className="leaderboard">

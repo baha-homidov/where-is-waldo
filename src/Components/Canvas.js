@@ -16,7 +16,7 @@ function Canvas(props) {
     setTimeout(function () {
       setSuccessVisibility("hide");
     }, 3000);
-    console.log("success");
+
   }
 
   function fail() {
@@ -51,7 +51,7 @@ function Canvas(props) {
         x: xPercent,
         y: yPercent,
       };
-      console.log(newCoordinates);
+
       setCoordinates(newCoordinates);
     }
   }

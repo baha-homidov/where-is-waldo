@@ -38,7 +38,7 @@ async function getHero(name) {
     return docSnap.data();
   } else {
     // doc.data() will be undefined in this case
-    console.log("No such document!");
+
     return;
   }
 }
@@ -63,9 +63,9 @@ async function writeNewScore(name, time) {
       name,
       time,
     });
-    console.log("Document written with ID: ", docRef.id);
+
   } catch (e) {
-    console.log("writeNewScore error: " + e);
+
   }
 }
 
