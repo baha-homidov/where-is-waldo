@@ -1,4 +1,4 @@
-# Barker (Twitter Clone)
+# Where's Waldo (Game Legends Edition)
 
 A puzzle game based on the Where's Waldo
 
